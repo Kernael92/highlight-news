@@ -1,43 +1,37 @@
 {% import 'macros.html' as macro %}
+{% extends 'base.html' %}
 
-<!-- DOCTYPE, html -->
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{title}} </title>
-        {% else %}
-        <title>Welcome to the best News Articles Website </title>
-        {% endif %}
-        
 
-    </head>
-    <body>
-        <!-- Sports source section -->
-        <h3> Top sports news sources</h3>
-        <ul>
-            {{ macro.displaySourceList(sports) }}
-        </ul>
-        <!-- Entertainment source section -->
-        <h3> Top Entertainment news sources</h3>
-        <ul>
-           {{ macro.displaySourceList(entertainment) }}
-        </ul>
-        <!-- Business source section -->
-        <h3> Top Business news sources</h3>
-        <ul>
-            {{macro.displaySourceList(business)}}
-        </ul>
-        <!-- Politics source section -->
-        <!-- <h3> Top Politics news sources</h3>
-        <ul>
-            {{macro.displaySourceList(politics)}}
-        </ul> -->
-        <!-- Technology source section -->
-        <h3> Top Technology news sources</h3>
-        <ul>
-           {{ macro.displaySourceList(technology)}}
-        </ul>
-            
-    </body>
-</html>
+<!-- Content block -->
+{% block content %}
+
+
+<!-- Sports source section -->
+<h3> Top sports news sources</h3>
+<ul>
+    {{ macro.displaySourceList(sports) }}
+</ul>
+<!-- Entertainment source section -->
+<h3> Top Entertainment news sources</h3>
+<ul>
+    {{ macro.displaySourceList(entertainment) }}
+</ul>
+<!-- Business source section -->
+<h3> Top Business news sources</h3>
+<ul>
+    {{macro.displaySourceList(business)}}
+</ul>
+<!-- Politics source section -->
+<!-- <h3> Top Politics news sources</h3>
+<ul>
+    {{macro.displaySourceList(politics)}}
+</ul> -->
+<!-- Technology source section -->
+<h3> Top Technology news sources</h3>
+<ul>
+    {{ macro.displaySourceList(technology)}}
+</ul>
+
+{% endblock %}
+    
+   
