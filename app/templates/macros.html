@@ -1,7 +1,25 @@
 {% macro displaySourceList(source_list) %}
     {%if source_list is not none%}
         {% for source in source_list %}
-            <li> {{source.name}} </li>
+        <div class="col-md-3">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <a href="/source/{{source.id}}">{{source.name}} 
+                    </a>
+                    <div class="panel-body">
+                        <p>
+                            {{source.description |truncate(100)}}
+                        </p>
+                        <a href="/source/{{source.id}}" class="btn btn-primary btn-md">Check {{source.name}} </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+           
         {% endfor %}
     {% endif %}
 {% endmacro %}
