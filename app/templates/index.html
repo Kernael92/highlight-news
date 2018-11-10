@@ -11,6 +11,12 @@
 
     </head>
     <body>
-        
+        <!-- Sports source section -->
+        <h3> Top sports news sources</h3>
+        <ul>
+            {% for sports_source in sports %}
+            <li> {{sports_source.name}} </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>

@@ -17,11 +17,11 @@ class SourceTest(unittest.TestCase):
 
 
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_source_id,'espn')
-        self.assertEquals(self.new_source_name,'ESPN')
-        self.assertEquals(self.new_source_description,'ESPN has up-to-the-minute sports news coverage, scores, highlights and commentary for NFL, MLB, NBA, College Football, NCAA Basketball and more.')
-        self.assertEquals(self.new_source_url,'http://espn.go.com')
-        self.assertEquals(self.new_source_country,'us')
-        self.assertEquals(self.new_source_language,'en')
+        self.assertEqual(self.new_source.id,'espn')
+        self.assertEqual(self.new_source.name,'ESPN')
+        self.assertEqual(self.new_source.description,'ESPN has up-to-the-minute sports news coverage, scores, highlights and commentary for NFL, MLB, NBA, College Football, NCAA Basketball and more.')
+        self.assertEqual(self.new_source.url,'http://espn.go.com')
+        self.assertEqual(self.new_source.country,'us')
+        self.assertEqual(self.new_source.language,'en')
 if __name__ == '__main__':
     unittest.main()
