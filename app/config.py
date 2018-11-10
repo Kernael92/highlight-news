@@ -5,6 +5,8 @@ class Config:
     pass
 
     NEWS_SOURCES_BASE_URL = 'http://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    ARTICLES_BASE_URL = 'http://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+
 
 class ProdConfig(Config):
     '''
