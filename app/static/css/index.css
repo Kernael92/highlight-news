@@ -13,7 +13,7 @@ body {
 
 h3 {
     font-family: cursive;
-    color: pink;
+    color: lightblue;
     font-size: 60px;
     font-weight: bold;
     text-shadow: 2px 2px silver;
@@ -32,6 +32,10 @@ a:hover {
     background-color: silver;
 }
 .panel {
-    box-shadow: 10px 10px lightgreen;  
+    box-shadow: 10px 10px lightblue;  
+}
+.navbar {
+    background-color: lightblue;
+    
 }
 
