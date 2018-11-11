@@ -24,3 +24,11 @@ ul {
     padding: 20px;
     box-shadow: 10px 10px silver;
 }
+a:hover {
+    color: maroon;
+}
+.btn:hover {
+    color: blue;
+    background-color: silver;
+}
+
