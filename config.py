@@ -8,6 +8,9 @@ class Config:
 
     NEWS_SOURCES_BASE_URL = 'http://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
     ARTICLES_BASE_URL = 'http://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+    
 
 
 class ProdConfig(Config):
@@ -29,3 +32,8 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}
