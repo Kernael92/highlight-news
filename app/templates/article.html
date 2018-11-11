@@ -3,9 +3,11 @@
 % block content  %}
 <div class='container'>
     <h3> Top headlines </h3>
-    {% for article in article_list %}
+    {% for article_row in article | batch(4)%}
     
     <div class="row">
+        {% for article in article_row %}    
+
         <div class="col-md-3">
             <div class="thumbnail">
                 <a href="{{article.url}}" target="_blank">
@@ -26,10 +28,12 @@
             </div>
 
         </div>
+        {% endfor %}
 
     </div>
+    {% endfor %}
 
 
 </div>
-{% endfor %}
+
 % endblock %}
