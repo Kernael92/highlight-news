@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request,redirect,url_for
 from app import app
 from .request import get_sources,get_articles,search_source
 #Views
@@ -18,7 +18,14 @@ def index():
 
     
     title = 'Home-Welcome to the best News Article Website online'
-    return render_template('index.html', title=title, sports = sports_source, business=business_source, entertainment=entertainment_source, technology=technology_source, politics=politics_source)
+
+    search_source = request.args.get('source_query')
+
+    if search_source:
+        return redirect(url_for('search',source_name = search_source))
+    else:
+        return render_template('index.html', title=title, sports = sports_source, business=business_source, entertainment=entertainment_source, technology=technology_source, politics=politics_source)
+
 @app.route('/article/<id>')
 def article(id):
     '''
@@ -37,6 +44,6 @@ def search(source_name):
     source_name_format = "+".join(source_name_list)
     searched_sources = search_source(source_name_format)
     title = f'search results for {source_name}'
-    return render_template('search.html',sources = searched_sources)
+    return render_template('search.html',title=title,sources = searched_sources)
 
 
