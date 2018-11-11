@@ -4,6 +4,14 @@ body {
     margin: 20px;
     padding: 20px;
     border-style: groove;
+    outline-style: dotted;
     
 
+}
+
+h3 {
+    font-family: cursive;
+    color: pink;
+    font-size: 40px;
+    font-weight: bold;
 }
