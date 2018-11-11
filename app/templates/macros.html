@@ -29,4 +29,18 @@
     {% endfor%}
     {% endif %}
 {% endmacro %}
+{% macro displayArticleList(article_list) %}
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-card">
+            {%if article_list is not none%}
+            {% for article_row in article_list |batch(4)%}
+            <div class='row'>
+                    <li>{{ article.name}}</li>
+            </div>
+    
+            {% endfor %}
+            {% endif %}
+    </div>
+
+{% endmacro %}
+
 

@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
 <!-- Content block -->
 % block content  %}
 <div class='container'>
@@ -15,6 +17,7 @@
                 </a>
                 <div class="caption">
                     <h4><a href="{{article.url}}" target="_blank">{{article.title | truncate(40)}}</a></h4>
+                    <li>{{article.author}}</li>
                     <p>{{article.description | truncate(100)}}</p>
                     <a href="{{article.url}}" target="_blank">Read More</a>
 
