@@ -1,3 +1,4 @@
+certifi==2018.10.15
 Click==7.0
 dominate==2.3.4
 Flask==1.0.2
