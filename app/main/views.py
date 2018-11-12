@@ -20,12 +20,12 @@ def index():
     
     title = 'Home-Welcome to the best News Article Website online'
 
-    search_source = request.args.get('source_query')
+    # search_source = request.args.get('source_query')
 
-    if search_source:
-        return redirect(url_for('.search',source_name = search_source))
-    else:
-        return render_template('index.html', title=title, sports = sports_source, business=business_source, entertainment=entertainment_source, technology=technology_source, politics=politics_source)
+    # if search_source:
+    #     return redirect(url_for('.search',source_name = search_source))
+    # else:
+    return render_template('index.html', title=title, sports = sports_source, business=business_source, entertainment=entertainment_source, technology=technology_source, politics=politics_source)
 
 @main.route('/article/<id>')
 def article(id):

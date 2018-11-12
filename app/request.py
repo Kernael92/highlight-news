@@ -1,5 +1,6 @@
 
 import urllib.request,json
+import certifi
 from .models import Source
 from .models import Article
 
